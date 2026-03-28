@@ -1,0 +1,16 @@
+name: Hello
+
+on: 
+ push:
+   branches: ["main"]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: say hello to users
+        run: echo "Hello users"
+
+      - name: user will test this environment
+        run: echo "run this test"
