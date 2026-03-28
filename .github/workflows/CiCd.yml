@@ -1,0 +1,23 @@
+name: CICD
+
+on: 
+ push:
+   branches: ["main"]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: action/checkout@v4
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing code
+        run: echo "Teting code"
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: deploying the code
+         run: echo "Deploying the code"
