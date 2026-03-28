@@ -3,7 +3,17 @@ name: Hello
 on: 
  push:
    branches: ["main"]
- workflow_dispatch: 
+ workflow_dispatch:
+   inputs:
+     environments:
+      description: 
+      required: true
+      type: choice
+      options:
+        - dev
+        - prod
+        - staging
+     
 
 jobs:
   greet:
